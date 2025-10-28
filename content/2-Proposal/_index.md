@@ -63,7 +63,7 @@ The system leverages an AWS ECS architecture optimized for cost efficiency:
 
 Here is the cloud architecture diagram for the system:
 
-![HR System Architecture](/images/2-Proposal/proposalaws.jpg)
+![HR System Architecture](/images/2-Proposal/proposalaws.jpeg)
 
 ### AWS Services Utilized
 

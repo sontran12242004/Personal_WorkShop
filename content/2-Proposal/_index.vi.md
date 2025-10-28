@@ -64,7 +64,7 @@ Hệ thống sử dụng AWS ECS với kiến trúc hiệu quả chi phí:
 
 Đây là sơ đồ kiến trúc đám mây của hệ thống:
 
-![HR System Architecture](/images/2-Proposal/proposalaws.jpg)
+![HR System Architecture](/images/2-Proposal/platform_architecture.jpeg)
 
 ### Dịch vụ AWS sử dụng
 
