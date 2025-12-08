@@ -1,59 +1,68 @@
 ---
 title: "Worklog Tuần 3"
-date: 2025-09-09
+date: "2025-11-11"
 weight: 1
 chapter: false
 pre: " <b> 1.3. </b> "
 ---
+
 {{% notice warning %}}
 ⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
 {{% /notice %}}
 
-
 ### Mục tiêu tuần 3:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Tìm hiểu chuyên sâu về **Amazon EC2** và các dịch vụ lưu trữ liên quan (EBS, EFS, FSx).
+- Nắm được cơ chế hoạt động, cấu hình và các tùy chọn giá của EC2.
+- Thực hành tạo và quản lý EC2 Instance, EBS Volume, Snapshot.
+- Hiểu và ứng dụng Auto Scaling, Pricing Option và Lightsail.
+
+---
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Công việc                                                                                                                                                                                            | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
+| --- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
+| 2   | - Tổng quan **Amazon EC2**: khái niệm, khả năng co giãn, so sánh với máy chủ vật lý.<br>- Tìm hiểu các **Instance Type**, thông số kỹ thuật (CPU, Memory, Network, Storage).                         | 25/08/2025   | 25/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - Nghiên cứu **AMI (Amazon Machine Image)**, quy trình provision EC2 Instance.<br>- Tìm hiểu **Hypervisor (KVM, HVM, PV)** và cơ chế lựa chọn.                                                       | 26/08/2025   | 26/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Tìm hiểu **Key Pair** và cơ chế mã hóa thông tin đăng nhập (Linux/Windows).<br>- Tìm hiểu **EBS (Elastic Block Store)**: loại HDD, SSD, snapshot, replicate dữ liệu.                               | 27/08/2025   | 27/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Nghiên cứu **Instance Store**: đặc điểm, ưu nhược điểm, ứng dụng thực tế.<br>- Thực hành backup EBS bằng snapshot và phục hồi.                                                                     | 28/08/2025   | 28/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - Tìm hiểu **User Data** và **Metadata** trong EC2, cách tự động hóa khi khởi tạo Instance.<br>- Học về **EC2 Auto Scaling**, Scaling Policy, Load Balancer integration.                             | 29/08/2025   | 29/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 7   | - Tìm hiểu các **Pricing Options**: On-demand, Reserved Instance, Saving Plan, Spot Instance.<br>- Nghiên cứu **Amazon Lightsail**, **EFS**, **FSx** và **AWS Application Migration Service (MGN)**. | 30/08/2025   | 30/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+
+---
 
 ### Kết quả đạt được tuần 3:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+- Hiểu rõ **kiến trúc và hoạt động của Amazon EC2**:
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+    - Giống máy ảo truyền thống nhưng có khả năng mở rộng linh hoạt.
+    - Có thể khởi tạo nhanh, hỗ trợ nhiều loại workload như web, ứng dụng, database...
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+- Nắm được cơ chế **EC2 Instance Type**, **AMI**, **Hypervisor**, **Key Pair**.
+- Biết cách **tạo, kết nối, và backup EC2 Instance** thông qua snapshot EBS.
+- Hiểu rõ sự khác biệt giữa **EBS**, **Instance Store**, **EFS**, và **FSx**:
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+    - EBS: block storage gắn trực tiếp vào EC2, hoạt động độc lập qua mạng riêng.
+    - Instance Store: tốc độ cực cao, không lưu dữ liệu khi stop instance.
+    - EFS: lưu trữ dùng chung nhiều EC2 (Linux).
+    - FSx: tương tự EFS nhưng hỗ trợ NTFS và SMB (Windows/Linux).
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+- Nắm được **EC2 Auto Scaling**:
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+    - Tự động tăng giảm số lượng Instance.
+    - Hỗ trợ nhiều AZ và tích hợp Load Balancer.
+    - Có thể kết hợp nhiều Pricing Option.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+- Hiểu rõ 4 **Pricing Option chính**:
 
+    - On-demand: linh hoạt, giá cao.
+    - Reserved Instance & Saving Plan: tiết kiệm khi cam kết dài hạn.
+    - Spot Instance: giá rẻ, nhưng có thể bị dừng đột ngột.
 
+- Biết sử dụng **Amazon Lightsail** cho các workload nhẹ, test/dev.
+- Nắm được cơ chế **AWS Application Migration Service (MGN)** để sao chép máy chủ thật/ảo sang EC2.
+- Hiểu rõ quá trình replicate dữ liệu, snapshot incremental, và tối ưu hóa chi phí bằng deduplication.
+- Hoàn thành việc **tổng hợp tài liệu và ghi chú chi tiết** về toàn bộ chuỗi dịch vụ liên quan đến EC2.
+
+---

@@ -1,59 +1,62 @@
 ---
 title: "Worklog Tuần 8"
-date: 2025-09-09
+date: 2025-09-16
 weight: 1
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
 {{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
+⚠️ **Lưu ý:** Đây là bản tham khảo. Vui lòng *không sao chép nguyên văn* cho bài báo cáo của bạn.
 {{% /notice %}}
 
+### 🎯 Mục tiêu tuần 8:
+* Nắm vững kiến thức về **AWS VPC**, bảo mật mạng, cấu trúc subnet.
+* Biết cách thiết kế hệ thống mạng cơ bản trong AWS.
+* Thực hành tạo VPC, subnet, security group, route table và kiểm thử kết nối.
 
-### Mục tiêu tuần 8:
+---
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+### 📌 Các công việc triển khai trong tuần
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
+| --- | --------- | ------------- | ---------------- | --------------- |
+| 2 | - Tổng hợp kiến thức EC2 tuần trước <br> - Nhận mục tiêu học tập tuần 8 từ mentor | 18/08/2025 | 18/08/2025 | |
+| 3 | - Tìm hiểu khái niệm tổng quan về VPC: <br> &emsp;+ CIDR <br> &emsp;+ Subnet (Public/Private) <br> &emsp;+ Internet Gateway <br> &emsp;+ NAT Gateway | 19/08/2025 | 19/08/2025 | https://cloudjourney.awsstudygroup.com/ |
+| 4 | - Nghiên cứu sâu về bảo mật mạng: <br> &emsp;+ Security Group <br> &emsp;+ Network ACL (NACL) <br> &emsp;+ Route Table | 20/08/2025 | 20/08/2025 | https://cloudjourney.awsstudygroup.com/ |
+| 5 | - **Thực hành:** <br> &emsp;+ Tạo VPC mới <br> &emsp;+ Tạo Public/Private Subnet <br> &emsp;+ Tạo và bind Internet Gateway, NAT Gateway <br> &emsp;+ Cập nhật Route Table | 21/08/2025 | 22/08/2025 | https://cloudjourney.awsstudygroup.com/ |
+| 6 | - **Kiểm thử:** <br> &emsp;+ Deploy EC2 vào Public Subnet và SSH từ Internet <br> &emsp;+ Deploy EC2 vào Private Subnet và kiểm thử truy cập Internet thông qua NAT | 22/08/2025 | 22/08/2025 | https://cloudjourney.awsstudygroup.com/ |
 
+---
 
-### Kết quả đạt được tuần 8:
+### ✅ Kết quả đạt được tuần 8:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Hiểu rõ kiến trúc mạng AWS VPC gồm:
+    * Dải IP – CIDR
+    * Public và Private Subnet
+    * Internet Gateway và NAT Gateway
+    * Route Table – cơ chế định tuyến giữa các subnet
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Áp dụng kiến thức bảo mật mạng:
+    * Thiết lập Security Group phù hợp (SSH, HTTP, HTTPS)
+    * Hiểu cơ chế inbound/outbound rule
+    * Biết phân biệt SG và NACL
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Thực hành xây dựng **một môi trường VPC hoàn chỉnh**:
+    * 01 VPC
+    * 01 Public Subnet + 01 Private Subnet
+    * 01 Internet Gateway + 01 NAT Gateway
+    * Route Table cấu hình thủ công
+    * EC2 hoạt động ổn định trong từng subnet
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Tự kiểm thử thành công:
+    * SSH vào EC2 của Public Subnet
+    * Private Subnet không SSH trực tiếp từ Internet
+    * Private Subnet truy cập Internet thông qua NAT Gateway
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Bắt đầu hiểu tư duy “infrastructure as network topology” — cách cloud tách biệt tài nguyên bằng lớp mạng.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+---
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
+### 📌 Nhận xét cá nhân:
+Tuần 8 giúp tôi hiểu rõ hơn về hệ thống mạng trong AWS — phần quan trọng nhất khi triển khai ứng dụng backend. Việc tự tay tạo VPC và test kết nối giúp tôi hình dung cách doanh nghiệp thiết kế hệ thống an toàn, hạn chế rủi ro. Đây là bước quan trọng để chuẩn bị cho các nội dung nâng cao ở tuần sau như Load Balancer, Auto Scaling, IAM, S3, và các dịch vụ serverless.
 

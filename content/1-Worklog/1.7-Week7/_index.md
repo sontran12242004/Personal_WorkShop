@@ -1,57 +1,60 @@
 ---
 title: "Week 7 Worklog"
 date: 2025-09-09
-weight: 1
+weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
+{{% notice warning %}}
+⚠️ **Note:** This is a reference version. Please *do not copy verbatim* for your report.
 {{% /notice %}}
 
+### 🎯 Week 7 Objectives:
+* Continue to enhance AWS foundational knowledge to serve the following specialized weeks.
+* Proficiently operate AWS Console and AWS CLI instead of just watching theory.
+* Master EC2 – the core service that will be used throughout the internship journey.
 
-### Week 7 Objectives:
+---
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+### 📌 Tasks to be carried out this week
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | --------- | ------------- | ---------------- | --------------- |
+| 2 | - Update progress with mentor <br> - Receive week 7 objectives <br> - Prepare environment to start AWS practice | 11/08/2025 | 11/08/2025 | |
+| 3 | - Review AWS knowledge learned last week <br> - Learn about main service groups: Compute, Storage, Networking, Database | 12/08/2025 | 12/08/2025 | https://cloudjourney.awsstudygroup.com/ |
+| 4 | - **Practice:** <br> &emsp;+ Create AWS Free Tier account <br> &emsp;+ Install and configure AWS CLI <br> &emsp;+ Test CLI operation through test commands | 13/08/2025 | 13/08/2025 | https://cloudjourney.awsstudygroup.com/ |
+| 5 | - Study EC2 in more detail including: <br> &emsp;+ Instance type <br> &emsp;+ AMI <br> &emsp;+ EBS volume <br> &emsp;+ Elastic IP <br> - Watch real-world EC2 use cases in enterprises | 14/08/2025 | 15/08/2025 | https://cloudjourney.awsstudygroup.com/ |
+| 6 | - **Practice:** <br> &emsp;+ Create first EC2 instance <br> &emsp;+ Connect via SSH using key-pair <br> &emsp;+ Attach and manage EBS Volume <br> &emsp;+ Try basic server management operations | 15/08/2025 | 15/08/2025 | https://cloudjourney.awsstudygroup.com/ |
 
+---
 
-### Week 7 Achievements:
+### ✅ Week 7 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Understand the role of AWS in system development and begin to proficiently use basic service groups:
+    * Compute (EC2)
+    * Storage (S3, EBS)
+    * Networking (Basic VPC)
+    * Database (RDS Overview)
 
-* Successfully created and configured an AWS Free Tier account.
+* Created and configured AWS Free Tier account **without errors**, managed access key, secret key, region.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Installed and operated AWS CLI smoothly:
+    * Configure profile information
+    * Check resources via CLI
+    * Get list of regions, AMI, EC2 instances
+    * Manage key pairs
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Proficient in basic EC2 operations:
+    * Create EC2 instance
+    * SSH connect to Linux server
+    * Create – attach – detach EBS volume
+    * Assign Elastic IP and basic network management
 
-* Used AWS CLI to perform basic operations such as:
+* Confident in using both web interface (AWS Console) and CLI in parallel to manage resources.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+* Completed all week 7 objectives as required by mentor.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+---
+
+### 📌 Personal Notes:
+Week 7 is a pivotal week to start moving to heavier content like deep networking, IAM, autoscaling… Hands-on CLI operations helped me understand the nature of services better compared to just using Console. This is also the first time managing a real EC2 server, so I gained a lot of practical experience.

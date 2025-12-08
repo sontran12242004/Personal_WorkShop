@@ -1,59 +1,64 @@
 ---
-title: "Worklog Tuần 9"
-date: 2025-09-09
+title: "Worklog Tuần 8"
+date: 2025-09-16
 weight: 1
 chapter: false
-pre: " <b> 1.9. </b> "
+pre: " <b> 1.8. </b> "
 ---
 {{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
+⚠️ **Lưu ý:** Đây là bản tham khảo. Vui lòng **không sao chép nguyên văn** cho bài báo cáo thực tập của bạn, kể cả phần cảnh báo này.
 {{% /notice %}}
 
+### 🎯 Mục tiêu tuần 8:
 
-### Mục tiêu tuần 9:
+* Hiểu sâu hơn về kiến trúc mạng trong AWS (VPC, Subnet, Routing).
+* Làm quen với cách thiết kế hạ tầng chuẩn cho dự án backend Spring Boot.
+* Thực hành xây dựng nền tảng hạ tầng phục vụ cho hệ thống quản lý nhân sự (HRM Project).
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+---
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### 📌 Các công việc triển khai trong tuần:
 
+| Thứ | Công việc | Bắt đầu | Hoàn thành | Nguồn tài liệu |
+| --- | --------- | ------- | ----------- | --------------- |
+| 2 | - Họp với mentor / trainer để review kiến thức đã học tuần 7. <br> - Nhận roadmap tuần 8 (VPC – Network – Security). | 25/08/2025 | 25/08/2025 | |
+| 3 | - Tìm hiểu AWS VPC: <br> &emsp;+ CIDR, IP Addressing <br> &emsp;+ Public / Private Subnet <br> &emsp;+ Route Table <br> &emsp;+ Internet Gateway | 26/08/2025 | 26/08/2025 | https://cloudjourney.awsstudygroup.com/ |
+| 4 | - Nghiên cứu cơ chế bảo mật mạng AWS: <br> &emsp;+ Security Group <br> &emsp;+ Network ACL <br> &emsp;+ Differences SG vs NACL | 27/08/2025 | 27/08/2025 | https://cloudjourney.awsstudygroup.com/ |
+| 5 | - **Thực hành:** <br> &emsp;+ Tạo VPC mới cho dự án HRM <br> &emsp;+ Tạo Public Subnet + Private Subnet <br> &emsp;+ Gán Internet Gateway vào Public Subnet | 28/08/2025 | 29/08/2025 | AWS Console / AWS Docs |
+| 6 | - **Thực hành nâng cao:** <br> &emsp;+ Tạo NAT Gateway cho Private Subnet <br> &emsp;+ Tạo EC2 test trong từng subnet <br> &emsp;+ Kiểm tra SSH, outbound Internet và routing | 29/08/2025 | 29/08/2025 | AWS Console / CLI |
 
-### Kết quả đạt được tuần 9:
+---
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+### ✅ Kết quả đạt được tuần 8:
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Hiểu rõ cấu trúc mạng của AWS VPC và vai trò từng thành phần:
+    * CIDR → quản lý dải IP.
+    * Public subnet → dùng cho tài nguyên cần internet (jump server).
+    * Private subnet → triển khai backend, database.
+    * Route Table → điều hướng traffic.
+    * Internet Gateway & NAT Gateway → quản lý traffic ra/vào.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Phân biệt và sử dụng được:
+    * **Security Group** (stateless inbound/outbound rules).
+    * **Network ACL** (stateless firewall layer deeper than SG).
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Tự xây dựng thành công một môi trường VPC chuẩn cho dự án:
+    * 01 VPC riêng.
+    * 02 subnet (Public / Private).
+    * 01 Internet Gateway + 01 NAT Gateway.
+    * 02 EC2 instance test → hoạt động đúng chức năng từng subnet.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Kiểm thử thành công:
+    * EC2 Public Subnet → SSH trực tiếp.
+    * EC2 Private Subnet → không SSH từ internet (đúng thiết kế).
+    * Private Subnet có thể truy cập Internet thông qua NAT.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+* Bắt đầu hiểu cách AWS networking phục vụ triển khai ứng dụng Spring Boot HRM sau này:
+    * Backend chạy Private Subnet → bảo mật cao hơn.
+    * Chỉ Load Balancer public được người dùng truy cập.
+    * Database để private hoàn toàn.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+---
 
-
+### 📌 Nhận xét cá nhân:
+Tuần 8 giúp tôi hiểu sâu hơn về lớp mạng – phần quan trọng nhất khi xây dựng ứng dụng doanh nghiệp trên nền tảng AWS. Việc tự tay cấu hình VPC và test kết nối giúp tôi hiểu tư duy “secure-by-design” và cách các đội kỹ thuật AWS triển khai hệ thống thực tế. Đây là nền tảng để bước sang tuần tiếp theo

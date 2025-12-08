@@ -9,50 +9,47 @@ pre: " <b> 1.12 </b> "
 ⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
 {{% /notice %}}
 
+
 ### Mục tiêu tuần 12:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+* Tổng kết toàn bộ quá trình thực tập.
+* Hoàn thiện các task còn tồn đọng của dự án.
+* Chuẩn hóa tài liệu, báo cáo thực tập, worklog.
+* Kiểm tra lại toàn bộ hệ thống để chuẩn bị bàn giao.
+
+---
 
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Rà soát toàn bộ task đã hoàn thành trong các sprint <br> - Kiểm tra lỗi còn sót lại trong hệ thống                                                                                      | 01/09/2025   | 01/09/2025      |
+| 3   | - Hoàn thiện tài liệu nghiệp vụ, tài liệu kỹ thuật <br> - Bổ sung Worklog các tuần còn thiếu                                                        | 02/09/2025   | 02/09/2025      |
+| 4   | - Tối ưu lại API, kiểm tra log, validate input <br> - Viết hướng dẫn bàn giao cho team                                                               | 03/09/2025   | 03/09/2025      |
+| 5   | - Chuẩn bị báo cáo cuối kỳ <br> - Tổng hợp kiến thức, bài học kinh nghiệm trong suốt 12 tuần                                                        | 04/09/2025   | 04/09/2025      |
+| 6   | - Demo lại toàn hệ thống <br> - Fix các lỗi nhỏ phát sinh <br> - Nộp báo cáo + Worklog hoàn chỉnh                                                   | 05/09/2025   | 05/09/2025      |
 
+---
 
 ### Kết quả đạt được tuần 12:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+* Hoàn tất toàn bộ task trong dự án, bao gồm:
+    * BE cho hệ thống quản lý nhân sự (Spring Boot)
+    * Tích hợp Python nhận diện khuôn mặt
+    * Xử lý API, validate, log, bảo mật cơ bản
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Hoàn thiện toàn bộ Worklog 12 tuần và tài liệu bàn giao.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Tổng hợp và rút ra các bài học quan trọng:
+    * Quy trình làm việc nhóm trong môi trường doanh nghiệp.
+    * Phân chia task theo sprint, quản lý deadline.
+    * Cách viết tài liệu kỹ thuật và trao đổi với mentor/trainer.
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Thực hiện buổi demo nội bộ:
+    * Trình bày kiến trúc hệ thống
+    * Quy trình hoạt động của các API chính
+    * Tính năng nhận diện khuôn mặt (Python + OpenCV)
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Sẵn sàng bàn giao toàn bộ mã nguồn, tài liệu và môi trường dự án.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
+* Hoàn thành toàn bộ yêu cầu của kỳ thực tập FCJ.
 

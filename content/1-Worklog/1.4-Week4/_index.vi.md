@@ -1,59 +1,100 @@
 ---
 title: "Worklog Tuần 4"
-date: 2025-09-09
+date: "2025-11-11"
 weight: 1
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+{{% notice warning %}}
+⚠️ **Lưu ý:** Báo cáo này chỉ nhằm mục đích tham khảo học tập. Vui lòng **không sao chép nguyên văn** hoặc sử dụng vào mục đích nộp chính thức.
+{{% /notice %}}
 
 ### Mục tiêu tuần 4:
 
-* Kết nối, làm quen với các thành viên trong First Cloud Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+- Tìm hiểu chuyên sâu về **Amazon Simple Storage Service (S3)** và các dịch vụ lưu trữ liên quan.
+- Hiểu cấu trúc **object-based storage**, phân biệt với block storage.
+- Nắm được các **storage class**, chính sách **lifecycle**, **CORS**, và cơ chế **versioning**.
+- Tìm hiểu **Amazon Glacier**, **Snow Family**, **AWS Storage Gateway**, và **AWS Backup**.
+- Hiểu khái niệm **RTO/RPO** và các chiến lược phục hồi thảm họa (Disaster Recovery).
+
+---
 
 ### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Thứ | Công việc                                                                                                                                                                                                     | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
+| 2   | - Giới thiệu **Amazon S3**: khái niệm, đặc điểm của lưu trữ theo đối tượng.<br>- Tìm hiểu cơ chế nhân bản dữ liệu, durability 99.999999% và availability 99.99%.                                              | 01/09/2025   | 01/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - Nghiên cứu **bucket, object, key, access point**.<br>- Tìm hiểu **storage class**: Standard, IA, Intelligent Tiering, One Zone, Glacier, Deep Archive.                                                      | 02/09/2025   | 02/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Cấu hình **S3 lifecycle policy** để tự động chuyển đổi cấp lưu trữ.<br>- Tìm hiểu **multipart upload** và **event trigger** khi upload/xóa file.                                                            | 03/09/2025   | 03/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Học về **S3 hosting static website**, **CORS policy**, **Access Control List (ACL)**, **Bucket Policy**, **IAM Policy**.<br>- Thực hành thiết lập phân quyền truy cập.                                      | 04/09/2025   | 04/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - Tìm hiểu **S3 Versioning**, **S3 Endpoint**, **partition & prefix performance optimization**.<br>- Nghiên cứu **Amazon Glacier**: cơ chế retrieve dữ liệu (Expedited, Standard, Bulk).                      | 05/09/2025   | 05/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 7   | - Nghiên cứu **Snow Family (Snowball, Snowball Edge, Snowmobile)**.<br>- Tìm hiểu **AWS Storage Gateway** (File, Volume, Tape).<br>- Học về **AWS Backup**, **RTO/RPO**, và **Disaster Recovery Strategies**. | 06/09/2025   | 06/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
+
+---
 
 ### Kết quả đạt được tuần 4:
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+- **Nắm vững kiến thức về Amazon S3:**
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+    - Là **dịch vụ lưu trữ đối tượng** (object storage), không chỉnh sửa từng phần mà phải upload lại toàn bộ.
+    - Dữ liệu nhân bản trên **3 Availability Zones** trong cùng một region.
+    - Hỗ trợ **trigger event**, **multipart upload**, **versioning**, và **CORS configuration**.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+- **Hiểu rõ các lớp lưu trữ (Storage Class):**
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+    - **S3 Standard**: dữ liệu truy cập thường xuyên.
+    - **S3 Standard-IA** / **One Zone-IA**: dữ liệu ít truy cập, chi phí thấp hơn.
+    - **S3 Intelligent-Tiering**: tự động di chuyển dữ liệu giữa các lớp.
+    - **S3 Glacier** / **Deep Archive**: lưu trữ dài hạn, truy xuất chậm, giá rẻ.
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+- **Thực hành cấu hình Lifecycle Policy:**
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+    - Thiết lập tự động di chuyển đối tượng sau X ngày giữa các class lưu trữ.
+    - Tự động xóa đối tượng cũ sau thời gian quy định.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+- **Tìm hiểu CORS và cơ chế phân quyền:**
 
+    - **CORS (Cross-Origin Resource Sharing)** cho phép web app truy cập tài nguyên từ domain khác.
+    - **S3 ACL**: quyền truy cập cơ bản theo bucket/object.
+    - **Bucket Policy / IAM Policy**: xác định chi tiết quyền truy cập bằng JSON policy.
 
+- **Hiểu rõ về Versioning:**
+
+    - Khi bật versioning, việc xóa hoặc ghi đè không làm mất dữ liệu cũ.
+    - Hỗ trợ khôi phục file bị xoá hoặc ghi đè sai.
+
+- **Tối ưu hiệu suất S3:**
+
+    - Dùng **random prefix** để tăng hiệu năng tìm kiếm trong partition.
+    - Hiểu cơ chế **partition & key map hash** của S3.
+
+- **Amazon Glacier:**
+
+    - Phục vụ lưu trữ dữ liệu dài hạn với 3 cấp độ truy xuất:
+        - Expedited (1–5 phút)
+        - Standard (3–5 giờ)
+        - Bulk (5–12 giờ)
+
+- **Snow Family:**
+
+    - **Snowball / Snowball Edge / Snowmobile** dùng để **migrate dữ liệu quy mô lớn (TB → EB)** từ on-premise sang AWS.
+    - Có thể xử lý, mã hóa, và nén dữ liệu trước khi import lên S3 hoặc Glacier.
+
+- **AWS Storage Gateway:**
+
+    - Kết hợp lưu trữ **on-premise + cloud**, gồm 3 loại:
+        - **File Gateway (NFS/SMB)** → ghi vào S3.
+        - **Volume Gateway (iSCSI)** → lưu block data, snapshot lên EBS.
+        - **Tape Gateway (VTL)** → lưu băng ảo trên S3/Glacier.
+
+- **AWS Backup & Disaster Recovery:**
+    - Hiểu các khái niệm **RTO (Recovery Time Objective)** và **RPO (Recovery Point Objective)**.
+    - Phân biệt 4 chiến lược DR:
+        1. Backup & Restore
+        2. Pilot Light
+        3. Low Capacity Active-Active
+        4. Full Capacity Active-Active
+    - AWS Backup hỗ trợ EBS, EC2, RDS, DynamoDB, EFS, Storage Gateway.
+
+---

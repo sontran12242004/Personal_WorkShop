@@ -1,57 +1,72 @@
 ---
 title: "Week 10 Worklog"
-date: 2025-09-09
-weight: 2
+date: 2025-09-30
+weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
+{{% notice warning %}}
+⚠️ **Note:** This is a reference version. Please **do not copy verbatim** for your internship report.
 {{% /notice %}}
 
+### 🎯 Week 10 Objectives:
 
-### Week 10 Objectives:
+* Complete HRM backend system at the level of connecting with AWS infrastructure.
+* Learn and deploy **AWS IAM**, standard access permissions for the project.
+* Integrate AWS services such as **S3, SES, Secrets Manager** into project.
+* Add basic logging – monitoring.
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+---
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### 📌 Tasks to be carried out this week:
 
+| Day | Task | Start Date | Completion Date | Documentation |
+| --- | --------- | ------- | ----------- | -------- |
+| 2 | - Review week 9 results (ALB + Auto Scaling). <br> - Receive week 10 requirements from mentor. | 08/09/2025 | 08/09/2025 | |
+| 3 | - Learn about IAM: <br> &emsp;+ IAM User / Role / Group <br> &emsp;+ Inline Policy vs Managed Policy <br> &emsp;+ Best Practices "Least Privilege" | 09/09/2025 | 09/09/2025 | https://cloudjourney.awsstudygroup.com/ |
+| 4 | - **IAM Practice:** <br> &emsp;+ Create IAM Role for EC2 <br> &emsp;+ Grant S3, Secrets Manager access permissions <br> &emsp;+ Configure IAM User for dev/test | 10/09/2025 | 10/09/2025 | AWS Docs |
+| 5 | - Learn about AWS S3 & integrate into HRM backend: <br> &emsp;+ Upload employee avatar <br> &emsp;+ Retrieve files with signed URL <br> &emsp;+ Set up Bucket Policy, CORS | 11/09/2025 | 11/09/2025 | AWS S3 Docs |
+| 6 | - Learn about Secrets Manager: <br> &emsp;+ Store database credentials <br> &emsp;+ Get secret in Spring Boot (SDK) <br> - Learn about SES to prepare for sending HR notification emails | 12/09/2025 | 12/09/2025 | AWS Docs |
 
-### Week 10 Achievements:
+---
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+### ✅ Week 10 Achievements:
 
-* Successfully created and configured an AWS Free Tier account.
+#### 🔐 IAM (Identity & Access Management)
+* Understand authorization model in AWS – from basic to advanced.
+* Successfully created:
+    * IAM Role for EC2 (permissions to read S3, Secrets Manager).
+    * IAM User for dev/test environment.
+    * Custom Managed Policy for HRM project.
+* Applied **Least Privilege** standard to all resources.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+#### 📦 AWS S3 – Integration into HRM System
+* Created dedicated S3 Bucket for project (avatar + employee records).
+* Configured:
+    * Bucket Policy
+    * CORS
+    * Encryption (SSE-S3)
+* Spring Boot integration:
+    * Upload/delete files
+    * Generate Pre-signed URL
+    * Validate file type & size
+* Ensured personal data stored securely following Private Bucket model.
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+#### 🗝 AWS Secrets Manager
+* Store database passwords, JWT secret key.
+* Integrated Java AWS SDK to load secrets when application runs.
+* Removed hard-coded credentials → increased security.
 
-* Used AWS CLI to perform basic operations such as:
+#### ✉️ AWS SES (Simple Email Service)
+* Send email notifications for HRM events: leave requests, account creation, password reset.
+* Configured domain verification & create identities (sandbox mode).
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+#### 📊 Basic Logging & Monitoring
+* Integrated CloudWatch Logs in EC2.
+* Push Spring Boot application logs to CloudWatch to monitor errors & performance.
+* Created separate log group for each environment.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+---
+
+### 📌 Personal Notes:
+This week is one of the most important weeks, as I began connecting the backend with real services on AWS. Content like IAM, S3, Secrets Manager and SES helped me better understand how enterprises design systems that are both secure and scalable. Integrating these services into the HRM project provided direct experience with cloud application development in practice.

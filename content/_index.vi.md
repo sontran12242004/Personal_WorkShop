@@ -7,17 +7,17 @@ chapter: false
 
 # Báo cáo thực tập
 ### Thông tin sinh viên:
-&emsp; **Họ và tên:** Nguyễn Văn A
+&emsp; **Full Name:** Tran Dinh Son
 
-&emsp; **Số điện thoại:** 0989888999
+&emsp; **Phone Number:** 0389920644
 
-&emsp; **Email:** Anguyenvan@gmail.com
+&emsp; **Email:** Sontdse184005@fpt.edu.vn
 
-&emsp; **Trường:** Đại học Sư phạm Kỹ thuật TP.HCM
+&emsp; **University:** FPT University
 
-&emsp; **Ngành:** Công nghệ thông tin
+&emsp; **Major:** Information Technology
 
-&emsp; **Lớp:** AWS082025
+&emsp; **Class:** AWS082025
 
 &emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Vietnam
 
@@ -25,7 +25,7 @@ chapter: false
 
 &emsp; **Thời gian thực tập:** Từ ngày 12/08/2025 đến ngày 12/11/2025
 
-![Ảnh đại diện của bạn](/images/avatar.png)
+![Ảnh đại diện của bạn](/images/avatar.jpg)
 
 
 

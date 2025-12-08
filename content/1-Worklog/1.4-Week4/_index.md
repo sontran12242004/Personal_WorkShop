@@ -1,57 +1,100 @@
 ---
 title: "Week 4 Worklog"
 date: 2025-09-09
-weight: 1
+weight: 4
 chapter: false
 pre: " <b> 1.4. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+{{% notice warning %}}
+⚠️ **Note:** This report is for learning reference purposes only. Please **do not copy verbatim** or use for official submission.
+{{% /notice %}}
 
 ### Week 4 Objectives:
 
-* Connect and get acquainted with members of First Cloud Journey.
-* Understand basic AWS services, how to use the console & CLI.
+- Deep dive into **Amazon Simple Storage Service (S3)** and related storage services.
+- Understand **object-based storage** structure, distinguish from block storage.
+- Master **storage classes**, **lifecycle policies**, **CORS**, and **versioning** mechanisms.
+- Learn about **Amazon Glacier**, **Snow Family**, **AWS Storage Gateway**, and **AWS Backup**.
+- Understand **RTO/RPO** concepts and disaster recovery strategies (Disaster Recovery).
+
+---
 
 ### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
+| Day | Task                                                                                                                                                                                                     | Start Date | Completion Date | Reference Material                        |
+| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------- | --------------- | ----------------------------------------- |
+| 2   | - Introduction to **Amazon S3**: concepts, characteristics of object storage.<br>- Learn about data replication mechanisms, 99.999999% durability and 99.99% availability.                                              | 01/09/2025 | 01/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 3   | - Study **bucket, object, key, access point**.<br>- Learn about **storage classes**: Standard, IA, Intelligent Tiering, One Zone, Glacier, Deep Archive.                                                      | 02/09/2025 | 02/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Configure **S3 lifecycle policy** to automatically transition storage tiers.<br>- Learn about **multipart upload** and **event trigger** when uploading/deleting files.                                                            | 03/09/2025 | 03/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Learn about **S3 hosting static website**, **CORS policy**, **Access Control List (ACL)**, **Bucket Policy**, **IAM Policy**.<br>- Practice setting up access permissions.                                      | 04/09/2025 | 04/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - Learn about **S3 Versioning**, **S3 Endpoint**, **partition & prefix performance optimization**.<br>- Study **Amazon Glacier**: data retrieval mechanisms (Expedited, Standard, Bulk).                      | 05/09/2025 | 05/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 7   | - Study **Snow Family (Snowball, Snowball Edge, Snowmobile)**.<br>- Learn about **AWS Storage Gateway** (File, Volume, Tape).<br>- Learn about **AWS Backup**, **RTO/RPO**, and **Disaster Recovery Strategies**. | 06/09/2025 | 06/09/2025      | <https://cloudjourney.awsstudygroup.com/> |
+
+---
 
 ### Week 4 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+- **Master knowledge about Amazon S3:**
 
-* Successfully created and configured an AWS Free Tier account.
+    - It is an **object storage service**, cannot edit parts but must upload entire object.
+    - Data is replicated across **3 Availability Zones** within the same region.
+    - Supports **trigger events**, **multipart upload**, **versioning**, and **CORS configuration**.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+- **Understand storage tiers (Storage Classes):**
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+    - **S3 Standard**: frequently accessed data.
+    - **S3 Standard-IA** / **One Zone-IA**: infrequently accessed data, lower cost.
+    - **S3 Intelligent-Tiering**: automatically moves data between tiers.
+    - **S3 Glacier** / **Deep Archive**: long-term storage, slow retrieval, low cost.
 
-* Used AWS CLI to perform basic operations such as:
+- **Practice configuring Lifecycle Policy:**
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+    - Set up automatic transition of objects after X days between storage classes.
+    - Automatically delete old objects after specified time.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- **Learn about CORS and permission mechanisms:**
+
+    - **CORS (Cross-Origin Resource Sharing)** allows web apps to access resources from different domains.
+    - **S3 ACL**: basic access permissions by bucket/object.
+    - **Bucket Policy / IAM Policy**: defines detailed access permissions using JSON policy.
+
+- **Understand Versioning:**
+
+    - When versioning is enabled, deletion or overwriting does not lose old data.
+    - Supports recovery of deleted or incorrectly overwritten files.
+
+- **Optimize S3 performance:**
+
+    - Use **random prefix** to improve search performance in partitions.
+    - Understand S3's **partition & key map hash** mechanism.
+
+- **Amazon Glacier:**
+
+    - Serves long-term data storage with 3 retrieval levels:
+        - Expedited (1–5 minutes)
+        - Standard (3–5 hours)
+        - Bulk (5–12 hours)
+
+- **Snow Family:**
+
+    - **Snowball / Snowball Edge / Snowmobile** used to **migrate large-scale data (TB → EB)** from on-premise to AWS.
+    - Can process, encrypt, and compress data before importing to S3 or Glacier.
+
+- **AWS Storage Gateway:**
+
+    - Combines **on-premise + cloud** storage, includes 3 types:
+        - **File Gateway (NFS/SMB)** → writes to S3.
+        - **Volume Gateway (iSCSI)** → stores block data, snapshots to EBS.
+        - **Tape Gateway (VTL)** → stores virtual tapes on S3/Glacier.
+
+- **AWS Backup & Disaster Recovery:**
+    - Understand concepts of **RTO (Recovery Time Objective)** and **RPO (Recovery Point Objective)**.
+    - Distinguish 4 DR strategies:
+        1. Backup & Restore
+        2. Pilot Light
+        3. Low Capacity Active-Active
+        4. Full Capacity Active-Active
+    - AWS Backup supports EBS, EC2, RDS, DynamoDB, EFS, Storage Gateway.
+
+---
