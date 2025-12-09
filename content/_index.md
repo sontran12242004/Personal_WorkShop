@@ -1,16 +1,12 @@
 ---
 title: "Internship Report"
 date: 2025-09-09
-weight: 1
+weight: 0
 chapter: false
 ---
 
     
 # Internship Report
-
-<!-- {{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}} -->
 
 ### Student Information:
 &emsp; **Full Name:** Tran Dinh Son

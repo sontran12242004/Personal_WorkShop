@@ -5,9 +5,7 @@ weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** This is a reference version. Please *do not copy verbatim* for your report.
-{{% /notice %}}
+
 
 ### 🎯 Week 7 Objectives:
 * Continue to enhance AWS foundational knowledge to serve the following specialized weeks.

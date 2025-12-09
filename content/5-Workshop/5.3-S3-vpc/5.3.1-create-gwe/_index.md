@@ -1,40 +1,30 @@
 ---
-title : "Create a gateway endpoint"
+title : "Create VPC & Subnets"
 date :  2025-09-09
 weight : 1
 chapter : false
 pre : " <b> 5.3.1 </b> "
 ---
 
-1. Open the [Amazon VPC console](https://us-east-1.console.aws.amazon.com/vpc/home?region=us-east-1#Home:)
-2. In the navigation pane, choose **Endpoints**, then click **Create Endpoint**:
+1. Open Amazon VPC console (Note: Choose region suitable for needs, here the group uses Region ap-southeast-1)
+2. Select Create VPC
 
-{{% notice note %}}
-You will see **6 existing VPC endpoints** that support **AWS Systems Manager (SSM)**. These endpoints were deployed automatically by the **CloudFormation Templates** for this workshop.
-{{% /notice %}}
+
 
 ![endpoint](/images/5-Workshop/5.3-S3-vpc/endpoints.png)
 
-3. In the Create endpoint console:
-+ Specify name of the endpoint: ```s3-gwe```
-+ In service category, choose **AWS services**
+### Configuration:
++ Name: HRM-VPC
++ IPv4 CIDR: 10.0.0.0/16
 
 ![endpoint](/images/5-Workshop/5.3-S3-vpc/create-s3-gwe1.png)
 
-+ In **Services**, type ```s3``` in the search box and choose the service with type **gateway**
+4. Create Subnets (Split 2 AZs to ensure High Availability):
++ Public Subnets (2): 10.0.1.0/24 & 10.0.2.0/24 (Used for Load Balancer & NAT)
++ Private Subnets (2): 10.0.3.0/24 & 10.0.4.0/24 (Used for App, DB, Redis)
 
 ![endpoint](/images/5-Workshop/5.3-S3-vpc/services.png)
 
-+ For VPC, select **VPC Cloud** from the drop-down.
-+ For **Configure route tables**, select the route table that is already associated with **two subnets** (note: this is not the main route table for the VPC, but a second route table created by CloudFormation).
-
++ Click Create VPC and wait for state to change to Available is successful
 ![endpoint](/images/5-Workshop/5.3-S3-vpc/vpc.png)
 
-+ **For Policy**, leave the default option, **Full Access**, to allow full access to the service. You will deploy **a VPC endpoint policy** in a later lab module to demonstrate restricting access to **S3 buckets** based on policies.
-
-![endpoint](/images/5-Workshop/5.3-S3-vpc/policy.png)
-
-+ Do not add a tag to the VPC endpoint at this time.
-+ Click **Create endpoint**, then click x after receiving a successful creation message.
-
-![endpoint](/images/5-Workshop/5.3-S3-vpc/complete.png)

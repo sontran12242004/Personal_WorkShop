@@ -6,13 +6,36 @@ chapter : false
 pre : " <b> 5.1. </b> "
 ---
 
-#### VPC endpoints
-+ **VPC endpoints** are virtual devices. They are horizontally scaled, redundant, and highly available VPC components. They allow communication between your compute resources and AWS services without imposing availability risks.
-+ Compute resources running in VPC can access  **Amazon S3**  using a Gateway endpoint. PrivateLink interface endpoints can be used by compute resources running in VPC or on-premises.
+#### Introduction
++ HumanResource is a Human Resource Management System built on the .NET Core platform, applying a modern 3-Tier Architecture.
 
++ The goal of this Workshop is to re-platform the application from an On-premise environment to AWS Cloud infrastructure (Cloud Native Migration) while meeting the key principles of the AWS Well-Architected Framework:
+Security, Reliability, Performance Efficiency, and Cost Optimization.
 #### Workshop overview
-In this workshop, you will use two VPCs. 
-+ **"VPC Cloud"** is for cloud resources such as a  **Gateway endpoint** and an EC2 instance to test with. 
-+ **"VPC On-Prem"** simulates an on-premises environment such as a factory or corporate datacenter. An EC2 instance running strongSwan VPN software has been deployed in "VPC On-prem" and automatically configured to establish a Site-to-Site VPN tunnel with AWS Transit Gateway. This VPN simulates connectivity from an on-premises location to the AWS cloud. To minimize costs, only one VPN instance is provisioned to support this workshop. When planning VPN connectivity for your production workloads, AWS recommends using multiple VPN devices for high availability.
+Solution Architecture:
+
++ Compute: Use AWS Elastic Beanstalk (Docker platform) to deploy the HRM application, simplify infrastructure management, and support Auto Scaling as employee data or system load increases.
+
++ Database: Utilize Amazon RDS for SQL Server in a Private Subnet to securely store HR information such as employee profiles, contracts, attendance records, and payroll data.
+
++ Caching: Amazon ElastiCache (Redis) is used to store user sessions and cache frequently accessed HR data (employee lists, department structures), improving system response time.
+
+Network & Security:
+
++ VPC: Designed with a Public/Private Subnet model combined with a NAT Gateway, ensuring a secure and isolated HRM environment.
+
++ Application Layer Security: Implement AWS WAF combined with Amazon CloudFront to protect against web attacks and accelerate content delivery for employees across different regions.
+
+Storage:
+
++ Amazon S3 is used to store HR documents such as employment contracts, employee records, and training materials with high durability.
+
+DevOps:
+
++ A fully automated CI/CD pipeline using AWS CodePipeline and CodeBuild, enabling rapid deployment of HRM features such as payroll processing, attendance management, and leave approval workflows.
+
+Monitoring:
+
++ Amazon CloudWatch monitors system health (CPU, Network) and sends alerts to ensure the HRM system remains stable and highly available.
 
 ![overview](/images/5-Workshop/5.1-Workshop-overview/diagram1.png)

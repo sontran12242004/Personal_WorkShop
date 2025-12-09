@@ -1,43 +1,40 @@
 ---
-title : "Tạo một S3 Interface endpoint"
+title : "Initialize Amazon RDS"
 date : 2025-09-09
 weight : 2
 chapter : false
 pre : " <b> 5.4.2 </b> "
 ---
 
-Trong phần này, bạn sẽ tạo và kiểm tra Interface Endpoint  S3 bằng cách sử dụng môi trường truyền thống mô phỏng.
-
-1. Quay lại Amazon VPC menu. Trong thanh điều hướng bên trái, chọn Endpoints, sau đó click Create Endpoint.
-
-2. Trong Create endpoint console:
-+ Đặt tên interface endpoint
-+ Trong Service category, chọn **aws services** 
+1. Truy cập Bảng điều khiển RDS > Nhóm mạng con > Tạo nhóm mạng con DB
+   * Tên: db-private-group
+   * Mạng con: Chọn 2 Vùng chứa dữ liệu và chọn chính xác 2 Mạng con riêng tư
 
 ![name](/images/5-Workshop/5.4-S3-onprem/s3-interface-endpoint1.png)
-
-3.  Trong Search box, gõ S3 và nhấn Enter. Chọn endpoint có tên com.amazonaws.us-east-1.s3. Đảm bảo rằng cột Type có giá trị Interface.
-
 ![service](/images/5-Workshop/5.4-S3-onprem/s3-interface-endpoint2.png)
 
-4. Đối với VPC, chọn VPC Cloud từ drop-down.
-{{% notice warning %}}
-Đảm bảo rằng bạn chọn "VPC Cloud" và không phải "VPC On-prem"
-{{% /notice %}}
-+ Mở rộng **Additional settings** và đảm bảo rằng Enable DNS name *không* được chọn (sẽ sử dụng điều này trong phần tiếp theo của workshop)
 
 ![vpc](/images/5-Workshop/5.4-S3-onprem/s3-interface-endpoint3.png)
 
-5. Chọn 2 subnets trong AZs sau: us-east-1a and us-east-1b
+2. Go to Databases > Create database
 
 ![subnets](/images/5-Workshop/5.4-S3-onprem/s3-interface-endpoint4.png)
 
-6. Đối với Security group, chọn SGforS3Endpoint:
+3. Tùy chọn công cụ: Microsoft SQL Server (Phiên bản Express)
 
 ![sg](/images/5-Workshop/5.4-S3-onprem/s3-interface-endpoint5.png)
 
-7. Giữ default policy - full access và click Create endpoint
+4. Mẫu: Miễn phí
+5. Cài đặt: Đặt Mật khẩu chính (ghi nhớ để sử dụng sau)
 
 ![success](/images/5-Workshop/5.4-S3-onprem/s3-interface-endpoint-success.png)
 
-Chúc mừng bạn đã tạo thành công S3 interface endpoint. Ở bước tiếp theo, chúng ta sẽ kiểm tra interface endpoint.
+6. Kết nối:
+* VPC: VPC bạn đã tạo cho Web
+* Nhóm mạng con: db-private-group
+* Quyền truy cập công khai: Không
+* Nhóm bảo mật VPC: Chọn nhóm bảo mật bạn đã tạo cho cơ sở dữ liệu
+
+![sg](/images/5-Workshop/5.4-S3-onprem/s3-interface-endpoint6.png)
+
+7. Click Create database

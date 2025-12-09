@@ -5,9 +5,7 @@ weight: 8
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** This is a reference version. Please *do not copy verbatim* for your report.
-{{% /notice %}}
+
 
 ### 🎯 Week 8 Objectives:
 * Master knowledge about **AWS VPC**, network security, subnet structure.

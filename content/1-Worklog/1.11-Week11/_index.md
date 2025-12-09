@@ -5,9 +5,7 @@ weight: 11
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** This is a reference version. Please **do not copy verbatim** for your internship report.
-{{% /notice %}}
+
 
 ### 🎯 Week 11 Objectives:
 

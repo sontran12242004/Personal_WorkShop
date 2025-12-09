@@ -5,9 +5,7 @@ weight: 1
 chapter: false
 pre: " <b> 1.8. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Đây là bản tham khảo. Vui lòng *không sao chép nguyên văn* cho bài báo cáo của bạn.
-{{% /notice %}}
+
 
 ### 🎯 Mục tiêu tuần 8:
 * Nắm vững kiến thức về **AWS VPC**, bảo mật mạng, cấu trúc subnet.

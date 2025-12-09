@@ -5,9 +5,7 @@ weight: 5
 chapter: false
 pre: " <b> 5. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+
 
 # Secure Hybrid Access to S3 using VPC Endpoints
 
@@ -25,7 +23,8 @@ You will create two types of endpoints to access Amazon S3: a Gateway VPC endpoi
 
 1. [Workshop overview](5.1-Workshop-overview)
 2. [Prerequiste](5.2-Prerequiste/)
-3. [Access S3 from VPC](5.3-S3-vpc/)
-4. [Access S3 from On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (Bonus)](5.5-Policy/)
-6. [Clean up](5.6-Cleanup/)
+3. [Network Infrastructure Setup](5.3-S3-vpc/)
+4. [Application Deployment](5.4-S3-onprem/)
+5. [CI/CD Automation)](5.5-Policy/)
+6. [Optimization & Security](5.6-Monitoring&Operations/)
+7. [Cleanup](5.7-Clean-Up/)

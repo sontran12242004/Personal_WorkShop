@@ -6,9 +6,7 @@ chapter: false
 pre: " <b> 1.5. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** This report is compiled for learning and reference purposes. Do not copy verbatim or use for official submission.
-{{% /notice %}}
+
 
 ### Week 5 Objectives:
 

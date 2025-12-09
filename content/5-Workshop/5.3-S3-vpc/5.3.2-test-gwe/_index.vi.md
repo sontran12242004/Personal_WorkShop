@@ -1,5 +1,5 @@
 ---
-title : "Kiểm tra Gateway Endpoint"
+title : "Cấu hình Internet & NAT Gateway"
 date :  2025-09-09
 weight : 2
 chapter : false

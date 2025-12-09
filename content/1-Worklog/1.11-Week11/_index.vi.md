@@ -5,9 +5,7 @@ weight: 1
 chapter: false
 pre: " <b> 1.11. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Đây là bản tham khảo. Vui lòng **không sao chép nguyên văn** cho bài báo cáo thực tập của bạn.
-{{% /notice %}}
+
 
 ### 🎯 Mục tiêu tuần 11:
 

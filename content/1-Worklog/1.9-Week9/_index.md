@@ -5,9 +5,7 @@ weight: 9
 chapter: false
 pre: " <b> 1.9. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** This is a reference version. Please **do not copy verbatim** for your internship report, including this warning.
-{{% /notice %}}
+
 
 ### 🎯 Week 9 Objectives:
 

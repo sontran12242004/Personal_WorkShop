@@ -5,9 +5,7 @@ weight: 1
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Đây là bản tham khảo. Vui lòng *không sao chép nguyên văn* cho bài báo cáo của bạn.
-{{% /notice %}}
+
 
 ### 🎯 Mục tiêu tuần 7:
 * Tiếp tục nâng cao kiến thức nền tảng AWS để phục vụ các tuần chuyên sâu tiếp theo.

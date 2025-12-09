@@ -5,9 +5,7 @@ weight: 10
 chapter: false
 pre: " <b> 1.10. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** This is a reference version. Please **do not copy verbatim** for your internship report.
-{{% /notice %}}
+
 
 ### 🎯 Week 10 Objectives:
 
